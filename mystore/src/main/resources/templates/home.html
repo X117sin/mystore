@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商家信息</title>
+    <style>
+        .info-container {
+            width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .info-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #495057;
+            margin-right: 10px;
+        }
+        .info-value {
+            color: #212529;
+        }
+        .evaluate {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <div class="info-header">
+            <h2>欢迎登录，<span th:text="${supplier.sname}"></span></h2>
+        </div>
+        <div class="info-item">
+            <span class="info-label">商家编码：</span>
+            <span class="info-value" th:text="${supplier.scode}"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">商家名称：</span>
+            <span class="info-value" th:text="${supplier.sname}"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">微信：</span>
+            <span class="info-value" th:text="${supplier.sweixin}"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">联系电话：</span>
+            <span class="info-value" th:text="${supplier.tel}"></span>
+        </div>
+        <div class="info-item">
+            <span class="info-label">商家评分：</span>
+            <span class="info-value evaluate" th:text="${supplier.evaluate}"></span>
+        </div>
+    </div>
+</body>
+</html>
